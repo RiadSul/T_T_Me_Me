@@ -1,0 +1,309 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f0f2ef;
+  /* width: 720px; */
+  height: 2600px;
+  margin: 0;
+  padding: 0;
+}
+.parent {
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #f0f2ef;
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+/* Start Info */
+.info {
+  position: absolute;
+  top: 200px;
+  width: 700px;
+  height: 525px;
+  background-image: url(../info_parent.png);
+  background-size: 700px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.info::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 60px;
+  background: linear-gradient(to right, #04401d, #066a30);
+  bottom: 10px;
+  right: -5px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.face {
+  top: 30px;
+  position: absolute;
+  border-radius: 50%;
+  width: 200px;
+  border: #3b9e97 solid 7px;
+}
+.info .text {
+  font-weight: bold;
+  position: absolute;
+  top: 250px;
+  text-align: center;
+  font-size: 45px;
+  line-height: 1.5;
+  color: #3b9e97;
+}
+
+/* End Info */
+
+/*Start Green card */
+
+.mainCard {
+  margin: 850px auto 0;
+  width: 900px;
+  height: 300px;
+  background: linear-gradient(to right, #04401d, #066a30);
+  border-radius: 25px;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.QR {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  left: 40px;
+}
+.topA,
+.topB,
+.bottom,
+.left,
+.right {
+  position: absolute;
+  animation: 3.5s linear infinite;
+}
+.topA {
+  top: -3px;
+  left: 50%;
+  height: 12px;
+  animation-name: topA;
+}
+@keyframes topA {
+  0% {
+    width: 0;
+    background: white;
+  }
+  12.5% {
+    width: calc(51%);
+    background: white;
+  }
+  100% {
+    background: white;
+    width: calc(51%);
+  }
+}
+.right {
+  top: 0px;
+  right: -3px;
+  width: 12px;
+  animation-name: right;
+}
+@keyframes right {
+  12.5% {
+    height: 0;
+    background: white;
+  }
+  37.5% {
+    height: calc(100%);
+    background: white;
+  }
+  100% {
+    height: calc(100%);
+    background: white;
+  }
+}
+.bottom {
+  bottom: -3px;
+  right: -3px;
+  height: 12px;
+  animation-name: bottom;
+}
+@keyframes bottom {
+  37.5% {
+    width: 0;
+    background: white;
+  }
+  62.5% {
+    width: calc(100%);
+    background: white;
+  }
+  100% {
+    width: calc(100%);
+    background: white;
+  }
+}
+.left {
+  bottom: -2px;
+  left: -3px;
+  width: 12px;
+  animation-name: left;
+}
+@keyframes left {
+  62.5% {
+    height: 0;
+    background: white;
+  }
+  87.5% {
+    height: calc(100%);
+    background: white;
+  }
+  100% {
+    height: calc(100%);
+    background: white;
+  }
+}
+.topB {
+  top: -3px;
+  left: -3px;
+  height: 12px;
+  animation-name: tobB;
+}
+@keyframes tobB {
+  87.5% {
+    background: white;
+    width: 0;
+  }
+  100% {
+    background: white;
+    width: calc(51.5%);
+  }
+}
+.in {
+  height: 200px;
+  width: 200px;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  border: none;
+  z-index: 1;
+}
+.p {
+  position: absolute;
+  left: 350px;
+}
+.A {
+  top: 0px;
+  font-size: 50px;
+  font-weight: bold;
+}
+.B {
+  top: 80px;
+  font-size: 30px;
+  line-height: 1.6;
+}
+.pd {
+  margin: 10px 25px;
+  word-spacing: 2.6px;
+  font-size: 26px;
+}
+.Refresh {
+  font-size: 40px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  color: white;
+}
+
+/* End Green card */
+
+.Bell {
+  font-size: 70px;
+  position: absolute;
+  right: 40px;
+  top: 50px;
+  color: #34a298;
+}
+.Services {
+  width: 1000px;
+  position: absolute;
+  left: 0;
+  top: 1200px;
+  height: 600px;
+  overflow-x: scroll;
+}
+.Services p {
+  display: inline-block;
+  top: 0;
+  font-size: 40px;
+}
+.newSe {
+  top: 1200px;
+  position: absolute;
+  color: #3b9e97;
+  left: 50px;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: bold;
+}
+.allSe {
+  top: 1200px;
+  position: absolute;
+  display: inline-block;
+  left: 700px;
+  color: #999;
+  right: 30px;
+  font-size: 40px;
+}
+.Middle {
+  left: 0;
+  width: 2330px;
+  position: absolute;
+  top: 120px;
+}
+.sticky {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9;
+}
+.warning {
+  position: absolute;
+  top: 1900px;
+  width: 900px;
+  height: 420px;
+  background-color: #b53b50;
+  color: white;
+  font-size: 36px;
+  line-height: 1.6;
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+}
+.warning span {
+  display: block;
+  text-decoration: underline;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+.warning::after {
+  content: "";
+  position: absolute;
+  background-image: url(../Tabaud.jpg);
+  width: 240px;
+  height: 73px;
+  bottom: 10px;
+  left: calc(50% - 120px);
+}
